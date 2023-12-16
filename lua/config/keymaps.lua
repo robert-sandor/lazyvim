@@ -9,3 +9,10 @@ if Util.has("nvim-tmux-navigation") then
   vim.keymap.set("n", "<C-k>", "<cmd>NvimTmuxNavigateUp<cr>", { desc = "Go to lower window + tmux", silent = true })
   vim.keymap.set("n", "<C-l>", "<cmd>NvimTmuxNavigateRight<cr>", { desc = "Go to lower window + tmux", silent = true })
 end
+
+vim.keymap.set(
+  "n",
+  "<leader>fh",
+  "<cmd>Telescope find_files hidden=true no_ignore=true<cr>",
+  { desc = "Search with hidden files", silent = true }
+)
